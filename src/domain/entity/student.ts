@@ -1,5 +1,5 @@
+import { Email } from '../value-object/email'
 import { Entity } from './entity'
-import { Email } from './email'
 
 type StudentProps = {
   cpf: string

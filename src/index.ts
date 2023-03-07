@@ -1,5 +1,5 @@
-import { Email } from './domain/email'
-import { Student } from './domain/student'
+import { Student } from './domain/entity/student'
+import { Email } from './domain/value-object/email'
 
 interface App {
   status: string
