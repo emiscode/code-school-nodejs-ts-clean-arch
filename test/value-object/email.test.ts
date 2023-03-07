@@ -2,12 +2,9 @@ import { InvalidEmail } from '../../src/domain/error/invalid-email'
 import { Email } from '../../src/domain/value-object/email'
 
 describe('Given Email', () => {
-  let email: Email
-  let address: string
-
   describe('When a valid address is informed', () => {
-    address = 'emiscode@gmail.com'
-    email = new Email(address)
+    const address = 'emiscode@gmail.com'
+    const email = new Email(address)
 
     test('Then it should return an instance of Email', () => {
       expect(email).toBeInstanceOf(Email)
@@ -15,11 +12,11 @@ describe('Given Email', () => {
   })
 
   describe('When an invalid address is informed', () => {
-    address = 'emiscode@gmail'
+    const address = 'emiscode@gmail'
 
     test('Then it should thrown an error', () => {
       try {
-        email = new Email(address)
+        new Email(address)
       } catch (err: unknown) {
         expect(err).toBeInstanceOf(InvalidEmail)
       }
