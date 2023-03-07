@@ -1,3 +1,5 @@
+import { InvalidEmail } from '../error/invalid-email'
+
 class Email {
   protected address: string
 
@@ -5,7 +7,7 @@ class Email {
 
   constructor(address: string) {
     if (!this.#validator.test(address)) {
-      throw Error('Invalid Email')
+      throw new InvalidEmail()
     }
 
     this.address = address

@@ -1,3 +1,4 @@
+import { InvalidCPF } from '../../src/domain/error/invalid-cpf'
 import { CPF } from '../../src/domain/value-object/cpf'
 
 describe('Given CPF', () => {
@@ -20,8 +21,7 @@ describe('Given CPF', () => {
       try {
         cpf = new CPF(digit)
       } catch (err: unknown) {
-        expect(err).toBeInstanceOf(Error)
-        expect(Object(err).message).toBe('Invalid CPF')
+        expect(err).toBeInstanceOf(InvalidCPF)
       }
     })
   })

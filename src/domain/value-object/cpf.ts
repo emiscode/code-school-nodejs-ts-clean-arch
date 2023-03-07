@@ -1,3 +1,5 @@
+import { InvalidCPF } from '../error/invalid-cpf'
+
 class CPF {
   protected digit: string
 
@@ -5,7 +7,7 @@ class CPF {
 
   constructor(digit: string) {
     if (!this.#validator.test(digit)) {
-      throw Error('Invalid CPF')
+      throw new InvalidCPF()
     }
 
     this.digit = digit

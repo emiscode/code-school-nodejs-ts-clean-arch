@@ -1,3 +1,4 @@
+import { InvalidEmail } from '../../src/domain/error/invalid-email'
 import { Email } from '../../src/domain/value-object/email'
 
 describe('Given Email', () => {
@@ -20,8 +21,7 @@ describe('Given Email', () => {
       try {
         email = new Email(address)
       } catch (err: unknown) {
-        expect(err).toBeInstanceOf(Error)
-        expect(Object(err).message).toBe('Invalid Email')
+        expect(err).toBeInstanceOf(InvalidEmail)
       }
     })
   })
