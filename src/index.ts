@@ -26,6 +26,8 @@ try {
     phones,
   })
 
+  student.addPhone(new Phone({ ddd: '35', digit: '888888888' }))
+
   console.log(`STUDENT => ${JSON.stringify(student)}`)
 } catch (err: unknown) {
   console.log(`ERROR => ${Object(err).message}`)
