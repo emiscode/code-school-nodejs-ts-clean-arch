@@ -3,11 +3,11 @@ import {
   InvalidPhoneDigit,
 } from '../../src/domain/error/invalid-phone'
 
-import { Phone, PhoneProps } from '../../src/domain/value-object/phone'
+import { Phone } from '../../src/domain/value-object/phone'
 
 describe('Given Phone', () => {
   describe('When a valid phone is informed', () => {
-    const phoneProps: PhoneProps = { ddd: '35', digit: '999999999' }
+    const phoneProps = { ddd: '35', digit: '999999999' }
     const phone = new Phone(phoneProps)
 
     test('Then it should return an instance of Phone', () => {

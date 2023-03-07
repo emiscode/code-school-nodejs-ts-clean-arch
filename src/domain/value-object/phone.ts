@@ -23,4 +23,4 @@ class Phone {
   }
 }
 
-export { Phone, PhoneProps }
+export { Phone }
