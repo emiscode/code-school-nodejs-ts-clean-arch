@@ -1,10 +1,7 @@
 class Email {
   protected address: string
 
-  #validator = new RegExp(
-    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-    'gm'
-  )
+  #validator = new RegExp(/\S+@\S+\.\S+/)
 
   constructor(address: string) {
     if (!this.#validator.test(address)) {

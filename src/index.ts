@@ -1,4 +1,5 @@
 import { Student } from './domain/entity/student'
+import { CPF } from './domain/value-object/cpf'
 import { Email } from './domain/value-object/email'
 
 interface App {
@@ -12,10 +13,11 @@ const app: App = {
 try {
   console.log(`INFO => ${JSON.stringify(app)}`)
 
-  const email = new Email('emiscod@gmail.com')
+  const email = new Email('emiscode@gmail.com')
+  const cpf = new CPF('97.132238299')
 
   const student = new Student({
-    cpf: '07087733621',
+    cpf,
     name: 'emilio',
     email,
   })
