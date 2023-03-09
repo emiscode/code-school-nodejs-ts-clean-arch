@@ -1,7 +1,7 @@
 import {
   InvalidPhoneDDD,
   InvalidPhoneDigit,
-} from '../../src/domain/student/error/invalid-phone'
+} from '../../src/domain/student/error/phone.error'
 
 import { Phone } from '../../src/domain/student/phone'
 

@@ -1,4 +1,4 @@
-import { InvalidEmail } from '../../src/domain/student/error/invalid-email'
+import { InvalidEmail } from '../../src/domain/student/error/email.error'
 import { Email } from '../../src/domain/student/email'
 
 describe('Given Email', () => {

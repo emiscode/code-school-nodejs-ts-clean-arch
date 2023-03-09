@@ -1,4 +1,4 @@
-import { InvalidCPF } from '../../src/domain/student/error/invalid-cpf'
+import { InvalidCPF } from '../../src/domain/student/error/cpf.error'
 import { CPF } from '../../src/domain/student/cpf'
 
 describe('Given CPF', () => {
