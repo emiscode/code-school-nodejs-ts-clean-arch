@@ -1,9 +1,9 @@
 import {
   InvalidPhoneDDD,
   InvalidPhoneDigit,
-} from '../../src/domain/error/invalid-phone'
+} from '../../src/domain/student/error/invalid-phone'
 
-import { Phone } from '../../src/domain/value-object/phone'
+import { Phone } from '../../src/domain/student/phone'
 
 describe('Given Phone', () => {
   describe('When a valid phone is informed', () => {

@@ -1,6 +1,6 @@
-import { CPF } from '../value-object/cpf'
-import { Phone } from '../value-object/phone'
-import { Email } from '../value-object/email'
+import { CPF } from './cpf'
+import { Email } from './email'
+import { Phone } from './phone'
 
 type StudentProps = {
   cpf: CPF

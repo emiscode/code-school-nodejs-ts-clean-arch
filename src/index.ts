@@ -1,8 +1,8 @@
-import { Student } from './domain/entity/student'
-import { StudentFactory } from './domain/factory/student-factory'
-import { CPF } from './domain/value-object/cpf'
-import { Email } from './domain/value-object/email'
-import { Phone } from './domain/value-object/phone'
+import { Student } from './domain/student/student'
+import { StudentFactory } from './domain/student/student-factory'
+import { CPF } from './domain/student/cpf'
+import { Email } from './domain/student/email'
+import { Phone } from './domain/student/phone'
 
 interface App {
   status: string

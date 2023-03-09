@@ -1,5 +1,5 @@
-import { InvalidCPF } from '../../src/domain/error/invalid-cpf'
-import { CPF } from '../../src/domain/value-object/cpf'
+import { InvalidCPF } from '../../src/domain/student/error/invalid-cpf'
+import { CPF } from '../../src/domain/student/cpf'
 
 describe('Given CPF', () => {
   describe('When a valid digit is informed', () => {

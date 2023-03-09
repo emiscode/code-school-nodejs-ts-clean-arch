@@ -1,4 +1,4 @@
-import { InvalidCPF } from '../error/invalid-cpf'
+import { InvalidCPF } from './error/invalid-cpf'
 
 class CPF {
   protected digit: string

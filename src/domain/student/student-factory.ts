@@ -1,7 +1,7 @@
-import { Student } from '../entity/student'
-import { CPF } from '../value-object/cpf'
-import { Email } from '../value-object/email'
-import { Phone } from '../value-object/phone'
+import { CPF } from './cpf'
+import { Email } from './email'
+import { Phone } from './phone'
+import { Student } from './student'
 
 class StudentFactory {
   protected student: Student
