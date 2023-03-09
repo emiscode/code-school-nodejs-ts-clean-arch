@@ -19,7 +19,7 @@ class StudentFactory {
     return this
   }
 
-  create() {
+  create(): Student {
     return this.student
   }
 }
