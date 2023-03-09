@@ -35,9 +35,12 @@ try {
     'emiscode@gmail.com'
   )
 
-  factory.withPhone('35', '99238-8229').withPhone('35', '99876-7777')
+  const student2 = factory
+    .withPhone('35', '99238-8229')
+    .withPhone('35', '99876-7777')
+    .create()
 
-  console.log(`STUDENT => ${JSON.stringify(factory)}`)
+  console.log(`STUDENT => ${JSON.stringify(student2)}`)
 } catch (err: unknown) {
   console.log(`ERROR => ${Object(err).message}`)
 }

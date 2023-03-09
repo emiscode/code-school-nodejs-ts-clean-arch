@@ -18,6 +18,10 @@ class StudentFactory {
     this.student.addPhone(new Phone({ ddd, digit }))
     return this
   }
+
+  create() {
+    return this.student
+  }
 }
 
 export { StudentFactory }
