@@ -1,4 +1,5 @@
 import { Student } from './domain/entity/student'
+import { StudentFactory } from './domain/factory/student-factory'
 import { CPF } from './domain/value-object/cpf'
 import { Email } from './domain/value-object/email'
 import { Phone } from './domain/value-object/phone'
@@ -28,7 +29,15 @@ try {
 
   student.addPhone(new Phone({ ddd: '35', digit: '888888888' }))
 
-  console.log(`STUDENT => ${JSON.stringify(student)}`)
+  const factory = new StudentFactory(
+    'emilio',
+    '070.877.336-21',
+    'emiscode@gmail.com'
+  )
+
+  factory.withPhone('35', '99238-8229').withPhone('35', '99876-7777')
+
+  console.log(`STUDENT => ${JSON.stringify(factory)}`)
 } catch (err: unknown) {
   console.log(`ERROR => ${Object(err).message}`)
 }
