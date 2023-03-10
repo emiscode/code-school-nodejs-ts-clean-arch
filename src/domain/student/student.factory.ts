@@ -1,7 +1,7 @@
-import { CPF } from './cpf'
-import { Email } from './email'
-import { Phone } from './phone'
-import { Student } from './student'
+import { CPF } from '@domain/student/cpf'
+import { Email } from '@domain/student/email'
+import { Phone } from '@domain/student/phone'
+import { Student } from '@domain/student/student'
 
 class StudentFactory {
   protected student: Student

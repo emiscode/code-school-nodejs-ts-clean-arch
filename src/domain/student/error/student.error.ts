@@ -1,4 +1,4 @@
-import { CPF } from '../cpf'
+import { CPF } from '@domain/student/cpf'
 
 class StudentExistsError extends Error {
   constructor(cpf: CPF) {

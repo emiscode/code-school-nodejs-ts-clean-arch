@@ -1,4 +1,4 @@
-import { InvalidCPF } from './error/cpf.error'
+import { InvalidCPF } from '@domain/student/error/cpf.error'
 
 class CPF {
   protected _digit: string

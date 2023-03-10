@@ -1,4 +1,7 @@
-import { InvalidPhoneDDD, InvalidPhoneDigit } from './error/phone.error'
+import {
+  InvalidPhoneDDD,
+  InvalidPhoneDigit,
+} from '@domain/student/error/phone.error'
 
 type PhoneProps = {
   ddd: string

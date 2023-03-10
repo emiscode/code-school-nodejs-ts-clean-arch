@@ -1,4 +1,4 @@
-import { Student } from '../student/student'
+import { Student } from '@domain/student/student'
 
 type RecommendationProps = {
   referrer: Student

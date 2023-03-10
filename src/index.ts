@@ -1,9 +1,9 @@
-import { Student } from './domain/student/student'
-import { StudentFactory } from './domain/student/student.factory'
-import { CPF } from './domain/student/cpf'
-import { Email } from './domain/student/email'
-import { Phone } from './domain/student/phone'
-import { CryptoPasswordService } from './infra/student/crypto-password.service'
+import { StudentFactory } from '@domain/student/student.factory'
+import { CPF } from '@domain/student/cpf'
+import { Email } from '@domain/student/email'
+import { Phone } from '@domain/student/phone'
+import { CryptoPasswordService } from '@infra/student/crypto-password.service'
+import { Student } from '@domain/student/student'
 
 interface App {
   status: string

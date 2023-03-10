@@ -1,5 +1,5 @@
-import { SendEmailRecommendation } from '../../application/recommendation/send-email'
-import { Student } from '../../domain/student/student'
+import { SendEmailRecommendation } from '@application/recommendation/send-email'
+import { Student } from '@domain/student/student'
 
 class FakeSendEmailRecommendation implements SendEmailRecommendation {
   sendTo(student: Student): void {

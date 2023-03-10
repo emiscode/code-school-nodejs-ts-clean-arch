@@ -1,6 +1,6 @@
-import { CPF } from './cpf'
-import { Email } from './email'
-import { Phone } from './phone'
+import { CPF } from '@domain/student/cpf'
+import { Email } from '@domain/student/email'
+import { Phone } from '@domain/student/phone'
 
 type StudentProps = {
   cpf: CPF

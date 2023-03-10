@@ -1,4 +1,4 @@
-import { InvalidEmail } from './error/email.error'
+import { InvalidEmail } from '@domain/student/error/email.error'
 
 class Email {
   protected address: string

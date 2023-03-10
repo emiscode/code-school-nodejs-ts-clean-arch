@@ -1,5 +1,5 @@
-import { CPF } from './cpf'
-import { Student } from './student'
+import { CPF } from '@domain/student/cpf'
+import { Student } from '@domain/student/student'
 
 interface StudentRepository {
   register(student: Student): void

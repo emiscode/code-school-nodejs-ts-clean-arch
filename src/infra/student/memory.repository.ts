@@ -1,10 +1,11 @@
-import { CPF } from '../../domain/student/cpf'
+import { CPF } from '@domain/student/cpf'
+import { Student } from '@domain/student/student'
+import { StudentRepository } from '@domain/student/student.repository'
+
 import {
   StudentExistsError,
   StudentNotFoundError,
-} from '../../domain/student/error/student.error'
-import { Student } from '../../domain/student/student'
-import { StudentRepository } from '../../domain/student/student.repository'
+} from '@domain/student/error/student.error'
 
 class InMemoryStudentRepository implements StudentRepository {
   #students: Array<Student> = []

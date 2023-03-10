@@ -1,5 +1,5 @@
 import crypto from 'crypto'
-import { PasswordService } from '../../domain/student/password.service'
+import { PasswordService } from '@domain/student/password.service'
 
 class CryptoPasswordService implements PasswordService {
   #algorithm = 'aes-256-cbc'

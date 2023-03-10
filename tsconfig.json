@@ -1,14 +1,17 @@
 {
-    "extends": "@tsconfig/recommended/tsconfig.json",
-    "compilerOptions": {
-        "preserveConstEnums": true,
-        "outDir": "build"
+  "extends": "@tsconfig/recommended/tsconfig.json",
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "test/**/*"],
+  "compilerOptions": {
+    "preserveConstEnums": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "outDir": "build",
+    "paths": {
+      "@application/*": ["src/application/*"],
+      "@domain/*": ["src/domain/*"],
+      "@infra/*": ["src/infra/*"]
     },
-    "include": [
-        "src/**/*"
-    ],
-    "exclude": [
-        "node_modules",
-        "test/**/*"
-    ]
+    "typeRoots": ["./node_modules/@types", "./src/@types"]
+  }
 }
