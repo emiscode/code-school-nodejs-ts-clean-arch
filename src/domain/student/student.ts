@@ -28,6 +28,10 @@ class Student {
   get cpf(): CPF {
     return this.props.cpf
   }
+
+  get email(): Email {
+    return this.props.email
+  }
 }
 
 export { Student, StudentProps }
