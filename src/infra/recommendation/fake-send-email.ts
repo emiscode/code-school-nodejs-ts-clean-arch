@@ -1,4 +1,4 @@
-import { SendEmailRecommendation } from '@application/recommendation/send-email'
+import { SendEmailRecommendation } from '@application/recommendation/send-email-recommendation'
 import { Student } from '@domain/student/student'
 
 class FakeSendEmailRecommendation implements SendEmailRecommendation {

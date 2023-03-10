@@ -1,9 +1,7 @@
-import { StudentFactory } from '@domain/student/student.factory'
+import { RegisterStudent } from '@application/student/register-student'
 import { CPF } from '@domain/student/cpf'
-import { Email } from '@domain/student/email'
-import { Phone } from '@domain/student/phone'
 import { CryptoPasswordService } from '@infra/student/crypto-password.service'
-import { Student } from '@domain/student/student'
+import { InMemoryStudentRepository } from '@infra/student/memory.repository'
 
 interface App {
   status: string
@@ -15,42 +13,17 @@ const app: App = {
 
 try {
   console.log(`INFO => ${JSON.stringify(app)}`)
+  const studentRepository = new InMemoryStudentRepository()
+  const registerStudent = new RegisterStudent(studentRepository)
 
-  const email = new Email('emiscode@gmail.com')
-  const cpf = new CPF('070.877.336-21')
-  const phone = new Phone({ ddd: '35', digit: '999999999' })
-  const phones: Array<Phone> = [phone]
-
-  const student = new Student({
-    cpf,
-    name: 'emilio',
-    email,
-    phones,
-    password: '123',
+  registerStudent.register({
+    name: 'Emilio',
+    cpf: '070.877.336-21',
+    email: 'emiscode@gmail.com',
+    password: new CryptoPasswordService().encrypt('123'),
   })
 
-  student.addPhone(new Phone({ ddd: '35', digit: '888888888' }))
-
-  const factory = new StudentFactory(
-    'emilio',
-    '070.877.336-21',
-    'emiscode@gmail.com',
-    '123'
-  )
-
-  const student2 = factory
-    .withPhone('35', '99238-8229')
-    .withPhone('35', '99876-7777')
-    .create()
-
-  console.log(`STUDENT => ${JSON.stringify(student2)}`)
-  console.log(`NAME => ${student.name}`)
-
-  const passwordService = new CryptoPasswordService()
-  const passwordEncrypted = passwordService.encrypt('Emilio')
-
-  console.log(passwordEncrypted)
-  console.log(passwordService.validate(passwordEncrypted, 'Emilio'))
+  console.log(studentRepository.findByCPF(new CPF('070.877.336-21')))
 } catch (err: unknown) {
   console.log(`ERROR => ${Object(err).message}`)
 }
