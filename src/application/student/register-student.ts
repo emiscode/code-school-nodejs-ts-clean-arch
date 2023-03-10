@@ -5,7 +5,7 @@ import { StudentDTO } from './student.dto'
 class RegisterStudent {
   constructor(private studentRepository: StudentRepository) {}
 
-  register(studentDTO: StudentDTO) {
+  execute(studentDTO: StudentDTO) {
     const student = new StudentFactory(
       studentDTO.name,
       studentDTO.cpf,

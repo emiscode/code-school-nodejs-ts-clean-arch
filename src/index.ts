@@ -16,7 +16,7 @@ try {
   const studentRepository = new InMemoryStudentRepository()
   const registerStudent = new RegisterStudent(studentRepository)
 
-  registerStudent.register({
+  registerStudent.execute({
     name: 'Emilio',
     cpf: '070.877.336-21',
     email: 'emiscode@gmail.com',
