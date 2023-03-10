@@ -6,11 +6,11 @@
   "license": "MIT",
   "scripts": {
     "dev": "yarn nodemon",
-    "build": "yarn rimraf ./build && yarn tsc",
     "lint": "yarn eslint src --max-warnings=0",
     "start": "yarn build && node ./build/index.js",
     "test": "yarn jest --watchAll=false --coverage",
     "format": "yarn prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "build": "yarn rimraf ./build && yarn tsc --project tsconfig.build.json",
     "prepare": "yarn husky install && yarn husky add .husky/pre-commit 'yarn lint-staged'"
   },
   "husky": {
