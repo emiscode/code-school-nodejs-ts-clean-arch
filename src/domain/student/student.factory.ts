@@ -6,11 +6,12 @@ import { Student } from './student'
 class StudentFactory {
   protected student: Student
 
-  constructor(name: string, cpf: string, email: string) {
+  constructor(name: string, cpf: string, email: string, password: string) {
     this.student = new Student({
       cpf: new CPF(cpf),
       name,
       email: new Email(email),
+      password,
     })
   }
 

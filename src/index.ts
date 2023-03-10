@@ -3,6 +3,7 @@ import { StudentFactory } from './domain/student/student.factory'
 import { CPF } from './domain/student/cpf'
 import { Email } from './domain/student/email'
 import { Phone } from './domain/student/phone'
+import { CryptoPasswordService } from './infra/student/crypto.password.service'
 
 interface App {
   status: string
@@ -25,6 +26,7 @@ try {
     name: 'emilio',
     email,
     phones,
+    password: '123',
   })
 
   student.addPhone(new Phone({ ddd: '35', digit: '888888888' }))
@@ -32,7 +34,8 @@ try {
   const factory = new StudentFactory(
     'emilio',
     '070.877.336-21',
-    'emiscode@gmail.com'
+    'emiscode@gmail.com',
+    '123'
   )
 
   const student2 = factory
@@ -41,6 +44,13 @@ try {
     .create()
 
   console.log(`STUDENT => ${JSON.stringify(student2)}`)
+  console.log(`NAME => ${student.name}`)
+
+  const passwordService = new CryptoPasswordService()
+  const passwordEncrypted = passwordService.encrypt('Emilio')
+
+  console.log(passwordEncrypted)
+  console.log(passwordService.validate(passwordEncrypted, 'Emilio'))
 } catch (err: unknown) {
   console.log(`ERROR => ${Object(err).message}`)
 }

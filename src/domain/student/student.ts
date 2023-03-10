@@ -6,6 +6,7 @@ type StudentProps = {
   cpf: CPF
   name: string
   email: Email
+  password: string
   phones?: Array<Phone>
 }
 
@@ -18,6 +19,14 @@ class Student {
     }
 
     this.props.phones.push(phone)
+  }
+
+  get name(): string {
+    return this.props.name
+  }
+
+  get cpf(): CPF {
+    return this.props.cpf
   }
 }
 

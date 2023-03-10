@@ -1,7 +1,7 @@
 import { InvalidCPF } from './error/cpf.error'
 
 class CPF {
-  protected digit: string
+  protected _digit: string
 
   #validator = new RegExp(/^\d{3}\.\d{3}\.\d{3}-\d{2}$/)
 
@@ -10,7 +10,11 @@ class CPF {
       throw new InvalidCPF()
     }
 
-    this.digit = digit
+    this._digit = digit
+  }
+
+  get digit(): string {
+    return this._digit
   }
 }
 
