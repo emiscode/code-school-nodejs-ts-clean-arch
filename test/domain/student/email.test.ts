@@ -1,5 +1,5 @@
-import { InvalidEmail } from '../../src/domain/student/error/email.error'
-import { Email } from '../../src/domain/student/email'
+import { InvalidEmail } from '../../../src/domain/student/error/email.error'
+import { Email } from '../../../src/domain/student/email'
 
 describe('Given Email', () => {
   describe('When a valid address is informed', () => {
